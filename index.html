@@ -23,9 +23,28 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;line-height:1.6;cursor:none}
 
 /* CURSOR */
-.cursor{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 10px var(--cyan);transition:transform 0.1s}
-.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(0,229,255,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all 0.12s ease}
+/*.cursor{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 10px var(--cyan);transition:transform 0.1s}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(0,229,255,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all 0.12s ease}*/
 
+  
+.cursor{
+  position:fixed;
+  width:12px;
+  height:12px;
+  border:2px solid var(--cyan);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:9999;
+  transform:translate(-50%,-50%);
+}
+
+.cursor-ring{
+  display:none;
+}
+
+
+
+  
 /* NAV */
 nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(6,6,16,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 3rem;height:64px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--cyan);letter-spacing:2px}
