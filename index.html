@@ -43,19 +43,7 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;line-h
   transform:translate(-50%,-50%) scale(2.5);
 }
 
-<script>
-const cur = document.getElementById("cur");
 
-document.addEventListener("mousemove",e=>{
-  cur.style.left=e.clientX+"px";
-  cur.style.top=e.clientY+"px";
-});
-
-document.querySelectorAll("a,button").forEach(el=>{
-  el.addEventListener("mouseenter",()=>cur.classList.add("active"));
-  el.addEventListener("mouseleave",()=>cur.classList.remove("active"));
-});
-</script>
 /*end*/
 
 
