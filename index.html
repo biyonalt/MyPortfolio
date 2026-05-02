@@ -29,18 +29,34 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;line-h
   
 .cursor{
   position:fixed;
-  width:12px;
-  height:12px;
-  border:2px solid var(--cyan);
+  width:8px;
+  height:8px;
+  background:var(--cyan);
   border-radius:50%;
   pointer-events:none;
   z-index:9999;
   transform:translate(-50%,-50%);
+  transition:transform 0.15s ease;
 }
 
-.cursor-ring{
-  display:none;
+.cursor.active{
+  transform:translate(-50%,-50%) scale(2.5);
 }
+
+<script>
+const cur = document.getElementById("cur");
+
+document.addEventListener("mousemove",e=>{
+  cur.style.left=e.clientX+"px";
+  cur.style.top=e.clientY+"px";
+});
+
+document.querySelectorAll("a,button").forEach(el=>{
+  el.addEventListener("mouseenter",()=>cur.classList.add("active"));
+  el.addEventListener("mouseleave",()=>cur.classList.remove("active"));
+});
+</script>
+/*end*/
 
 
 
